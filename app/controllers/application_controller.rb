@@ -3,8 +3,8 @@ require "./app/models/user"
 class ApplicationController < Sinatra::Base
 
 	configure do
+    enable :sessions
 		set :views, "app/views"
-		enable :sessions
 		set :session_secret, "password_security"
 	end
 
